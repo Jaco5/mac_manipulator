@@ -44,7 +44,7 @@ if options.new_MAC_address:
     new_MAC_address = options.new_MAC_address
     print("[!] input address used")
 else:
-    evenNum = input("[i] choose an even number 'xx'')
+    evenNum = input("[i] choose an even number 'xx' ")
     mac_array = [evenNum]  # MAC addresses must start with an even number.
     generate_mac_address()
     new_MAC_address = ":".join(mac_array)
