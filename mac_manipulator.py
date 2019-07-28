@@ -36,15 +36,16 @@ def generate_mac_address():
 if options.interface:
     interface = options.interface
 else:
-    print("[readme] You may supply arguments when calling the script, see help. "
-          "Or enter the interface you wish to use now and a random address will be generated.")
+    print("[readme] You may supply arguments when calling the script, see help. ")
     interface = input("[i] choose an interface >")
+
 
 if options.new_MAC_address:
     new_MAC_address = options.new_MAC_address
     print("[!] input address used")
 else:
-    mac_array = ["00"]  # MAC addresses must start with an even number.
+    evenNum = input("[i] choose an even number 'xx'')
+    mac_array = [evenNum]  # MAC addresses must start with an even number.
     generate_mac_address()
     new_MAC_address = ":".join(mac_array)
     print("[!] random MAC address generated")
